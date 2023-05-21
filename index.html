@@ -1,20 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather Widget</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-   <h1>Weather Widget</h1>
-   <p>Forecast</p>
-   <form>
-    <input type="email" placeholder="Enter your email">
-    <input type="password" placeholder="Enter your password">
-    <input type="submit" value="Login" />
-   </form>
-   <script src="script.js"></script>
-</body>
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Carter+One&family=Dosis:wght@300;600&family=Poppins:wght@300&family=Yanone+Kaffeesatz&display=swap"
+      rel="stylesheet"
+    />
+    <title>Weather widget</title>
+    <link href="src/styles.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Weather Widget</h1>
+      <div class="wrapper">
+        <form class="search-bar" id="search">
+          <input
+            id="search-city"
+            type="text"
+            placeholder="Search for your city"
+          />
+          <button
+            id="search-button"
+            type="submit"
+            value="Search"
+            autofocus="on"
+            autofocus="off"
+          >
+            Search
+          </button>
+          <button id="current-button" value="Current">
+            Current
+          </button>
+        </form>
+        <br />
+        <div>
+          <div>City: <span id="city">London</span></div>
+          <strong> Weather:</strong> <span id="description"> Sunny </span>
+          <div><strong> Humidity: </strong> <span id="humidity">75</span></div>
+        </div>
+        <div>
+          <strong>
+            Current temperature:
+            <span id="temperature">17</span>
+          </strong>
+          <span>
+            <a href="#"> °C </a>
+          </span>
+          <br />
+          <br />
+          <div id="date"></div>
+        </div>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
 </html>
